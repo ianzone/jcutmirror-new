@@ -33,7 +33,7 @@ const ROUTES = [
 
 async function startPreview() {
   console.log('Starting vite preview...');
-  const proc = spawn('npx', ['vite', 'preview', '--port', String(PORT), '--host', '127.0.0.1'], {
+  const proc = spawn('bunx', ['vite', 'preview', '--port', String(PORT), '--host', '127.0.0.1'], {
     stdio: ['ignore', 'pipe', 'pipe'],
   });
   proc.stdout.on('data', () => {});
